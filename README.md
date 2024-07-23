@@ -21,52 +21,52 @@ DevOpsFetch provides various commands to retrieve system information. You can ac
 
 | Flag | Long Flag | Description | Usage Example |
 |---|---|---|---|
-| `-p` | `--port` | Display active ports and services. | `devopsfetch -p` |
-| `-p <port_number>` | `--port <port_number>` | Display detailed information about a specific port. | `devopsfetch -p 80` |
+| `-p` | `--port` | Display active ports and services. | `sudo devopsfetch -p` |
+| `-p <port_number>` | `--port <port_number>` | Display detailed information about a specific port. | `sudo devopsfetch -p 80` |
 | `-d` | `--docker` | List all Docker images and containers. | `devopsfetch -d` |
-| `-d <container_name>` | `--docker <container_name>` | Display detailed information about a specific container. | `devopsfetch -d my-app` |
+| `-d <container_name>` | `--docker <container_name>` | Display detailed information about a specific container. | `sudo devopsfetch -d my-app` |
 | `-n` | `--nginx` | Display all Nginx domains and their ports. | `devopsfetch -n` |
-| `-n <domain>` | `--nginx <domain>` | Display detailed configuration information for a specific domain. | `devopsfetch -n example.com` |
+| `-n <domain>` | `--nginx <domain>` | Display detailed configuration information for a specific domain. | `sudo devopsfetch -n example.com` |
 | `-u` | `--users` | List all users and their last login times. | `devopsfetch -u` |
-| `-u <username>` | `--users <username>` | Display detailed information about a specific user. | `devopsfetch -u ThePrimeJnr` |
-| `-t` | `--time` | Display activities within a specified time range. | `devopsfetch -t 2024-07-18 2024-07-23` |
-| `-h` | `--help` | Display help message. | `devopsfetch -h` |
+| `-u <username>` | `--users <username>` | Display detailed information about a specific user. | `sudo devopsfetch -u ThePrimeJnr` |
+| `-t` | `--time` | Display activities within a specified time range. | `sudo devopsfetch -t 2024-07-18 2024-07-23` |
+| `-h` | `--help` | Display help message. | `sudo devopsfetch -h` |
 
 **Example Usage:**
 
 - **List active ports:**
 ```bash
-devopsfetch -p
+sudo devopsfetch -p
 ```
 
 - **Get details about port 80:**
 ```bash
-devopsfetch -p 80
+sudo devopsfetch -p 80
 ```
 
 - **List Docker containers:**
 ```bash
-devopsfetch -d
+sudo devopsfetch -d
 ```
 
 - **Get details about the container named 'my-app':**
 ```bash
-devopsfetch -d my-app
+sudo devopsfetch -d my-app
 ```
 
 - **List Nginx domains:**
 ```bash
-devopsfetch -n
+sudo devopsfetch -n
 ```
 
 - **Get configuration details for the domain 'example.com':**
 ```bash
-devopsfetch -n example.com
+sudo devopsfetch -n example.com
 ```
 
 - **List system users:**
 ```bash
-devopsfetch -u
+sudo devopsfetch -u
 ```
 
 - **Get details about the user 'ThePrimeJnr':**
@@ -76,7 +76,7 @@ devopsfetch -u ThePrimeJnr
 
 - **Display activities from July 18th to 23rd:**
 ```bash
-devopsfetch -t 2024-07-18 2024-07-23
+sudo devopsfetch -t 2024-07-18 2024-07-23
 ```
 
 ## **Logging**
