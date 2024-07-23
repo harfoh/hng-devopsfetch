@@ -59,7 +59,9 @@ After=network.target
 [Service]
 ExecStart=/usr/local/bin/devopsfetch
 Restart=always
-RestartSec=300  # Restart every 5 minutes
+RestartSec=60  # Restart every 1 minute
+StartLimitIntervalSec=300  # 5 minutes interval for rate limiting
+StartLimitBurst=3  # Maximum of 3 restarts within interval
 User=root
 StandardOutput=journal
 StandardError=journal
@@ -89,6 +91,13 @@ setup_logging() {
     endscript
 }
 EOL'
+}
+
+# Create log file with proper permissions
+create_log_file() {
+    sudo touch /var/log/devopsfetch.log
+    sudo chmod 664 /var/log/devopsfetch.log
+    sudo chown root:adm /var/log/devopsfetch.log
 }
 
 # Main function for continuous execution
